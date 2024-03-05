@@ -1,0 +1,14 @@
+
+# for linux terminal
+export AWS_ACCESS_KEY_ID="_________________________________________________"
+export AWS_SECRET_ACCESS_KEY="_______________________________________________"
+
+# CMD
+SET AWS_ACCESS_KEY_ID=_________________________
+SET AWS_SECRET_ACCESS_KEY=_____________________________
+
+#Powershell
+
+$Env:AWS_ACCESS_KEY_ID="___________________________________"
+$Env:AWS_SECRET_ACCESS_KEY="_____________________________________"
+

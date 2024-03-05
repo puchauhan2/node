@@ -6,6 +6,11 @@ const credentials = fromEnv({}); // From environment variable
 const region = 'us-east-1';
 const ec2Client = new EC2Client({ region, credentials });
 const kmsClient = new KMSClient({ region, credentials });
+const red='\x1b[31m'
+const green='\x1b[32m'
+const yellow='\x1b[33m'
+const blue='\x1b[34m'
+const clear='\x1b[0m'
 
 const snapshotId = 'snap-088acaebf001fe94c'; //################ Put Source SnapShot id here
 const target_account_id = '188805026079' //################ Put target account id here
@@ -70,7 +75,7 @@ async function get_key_policy(params_kms_policy) {
         console.log("####################### New custom KMS policy #######################");
         console.log(policy_json);
         const new_policy = JSON.stringify(policy_json)
-        put_key_policy(kms_key_id,new_policy);
+        //put_key_policy(kms_key_id,new_policy);
     } catch (err) {
       console.log("Error occurred at Get KMS policy JSON:", err);
     }
